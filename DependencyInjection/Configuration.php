@@ -62,8 +62,6 @@ class Configuration implements ConfigurationInterface
                         ->end()
                         ->scalarNode('lifetime')
                             ->defaultValue(86400)
-                            ->ifTrue(function($v) { return !is_integer($v); })
-                            ->thenInvalid('Only integer are allowed!')
                         ->end()
                     ->end()
                 ->end()
